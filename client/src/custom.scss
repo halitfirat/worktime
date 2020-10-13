@@ -1,0 +1,8 @@
+$theme-colors: (
+  'primary': navy,
+  'danger': #cd0000
+);
+$event-bg: navy;
+
+@import '~bootstrap/scss/bootstrap';
+@import 'react-big-calendar/lib/sass/styles';

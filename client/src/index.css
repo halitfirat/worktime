@@ -1,0 +1,294 @@
+/* icomoon font */
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?1707lf');
+  src: url('fonts/icomoon.eot?1707lf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?1707lf') format('truetype'),
+    url('fonts/icomoon.woff?1707lf') format('woff'),
+    url('fonts/icomoon.svg?1707lf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-spinner11 {
+  position: relative;
+  top: 1px;
+  left: 2px;
+}
+.icon-spinner11:before {
+  content: '\e984';
+}
+.icon-bin2 {
+  position: relative;
+  top: 1px;
+  left: 2px;
+}
+.icon-bin2:before {
+  content: '\e9ad';
+}
+
+.icon-plus {
+  position: relative;
+  top: 1px;
+  left: 2px;
+}
+.icon-plus:before {
+  content: '\ea0a';
+}
+
+.icon-github:before {
+  content: '\eab0';
+}
+
+/* roboto font */
+
+@font-face {
+  font-family: 'RobotoRegular';
+  src: url('fonts/RobotoRegular.eot');
+  src: url('fonts/RobotoRegular.eot') format('embedded-opentype'),
+    url('fonts/RobotoRegular.woff2') format('woff2'),
+    url('fonts/RobotoRegular.woff') format('woff'),
+    url('fonts/RobotoRegular.ttf') format('truetype'),
+    url('fonts/RobotoRegular.svg#RobotoRegular') format('svg');
+}
+
+@font-face {
+  font-family: 'RobotoLight';
+  src: url('fonts/RobotoLight.eot');
+  src: url('fonts/RobotoLight.eot') format('embedded-opentype'),
+    url('fonts/RobotoLight.woff2') format('woff2'),
+    url('fonts/RobotoLight.woff') format('woff'),
+    url('fonts/RobotoLight.ttf') format('truetype'),
+    url('fonts/RobotoLight.svg#RobotoLight') format('svg');
+}
+
+@font-face {
+  font-family: 'RobotoBlack';
+  src: url('fonts/RobotoBlack.eot');
+  src: url('fonts/RobotoBlack.eot') format('embedded-opentype'),
+    url('fonts/RobotoBlack.woff2') format('woff2'),
+    url('fonts/RobotoBlack.woff') format('woff'),
+    url('fonts/RobotoBlack.ttf') format('truetype'),
+    url('fonts/RobotoBlack.svg#RobotoBlack') format('svg');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* header */
+
+.header {
+  background-color: navy;
+  color: silver;
+  font-family: RobotoRegular;
+  text-align: center;
+  padding: 39px 0 23px 0;
+  margin-bottom: 9px;
+}
+
+.header-sub {
+  letter-spacing: 4px;
+  word-spacing: 6px;
+  font-size: 30px;
+  font-family: RobotoLight;
+}
+
+.header-main {
+  letter-spacing: 3px;
+  word-spacing: 6px;
+  font-family: RobotoBlack;
+  font-size: 84px;
+  margin: -12px 0 8px 0;
+}
+
+.header-link {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin: 3px 0 1px 0;
+}
+
+.icon-github {
+  font-size: 15px;
+  position: relative;
+  bottom: 1px;
+}
+
+/* media query > 480px */
+
+@media screen and (max-width: 495px) {
+  .header {
+    background-color: navy;
+    color: silver;
+    font-family: RobotoRegular;
+    text-align: center;
+    padding: 19px 0 23px 0;
+    margin-bottom: 9px;
+  }
+
+  .header-sub {
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-size: 16px;
+    font-family: RobotoLight;
+  }
+
+  .header-main {
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-family: RobotoBlack;
+    font-size: 45px;
+    margin: -7px 0 8px 0;
+  }
+
+  .header-link {
+    font-size: 18px;
+    margin: -7px 0 -15px 0;
+  }
+
+  .icon-github {
+    font-size: 1px;
+    position: relative;
+  }
+
+  .modals {
+    min-width: 350px;
+  }
+}
+
+/* fill buttons */
+
+.button-fill {
+  display: inline-flex;
+  height: 50px;
+  width: 150px;
+  text-transform: uppercase;
+  background-color: navy;
+  border: 2px solid navy;
+  color: white;
+
+  text-decoration: none;
+  font-size: 20px;
+  font-family: RobotoRegular;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.button-fill.right {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.button-fill.left {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-right: 1px;
+}
+
+#button-fill {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#button-fill span {
+  position: relative;
+  transition: all 0.45s ease-Out;
+}
+
+#spin {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  left: 70px;
+  top: 20px;
+  transform: rotate(0deg);
+  background: none;
+  position: absolute;
+  transition: all 0.5s ease-Out;
+}
+
+#button-fill:hover #spin {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  left: -70px;
+  top: -70px;
+  background: white;
+  transform: rotate(80deg);
+}
+
+#button-fill:hover span {
+  color: navy;
+}
+
+/* media query > 320px */
+
+@media screen and (max-width: 335px) {
+  .button-fill {
+    width: 49%;
+  }
+
+  .modals {
+    min-width: 264px;
+  }
+}
+
+/* modals & overlays */
+
+.modals {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.overlays {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
