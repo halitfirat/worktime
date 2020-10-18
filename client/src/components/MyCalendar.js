@@ -34,9 +34,7 @@ const MyCalendar = (props) => {
   }, []);
 
   useEffect(() => {
-    if (worktimeListSelector.length > 0) {
-      setEvents(worktimeListSelector.map((w) => mapEvent(w)));
-    }
+    setEvents(worktimeListSelector.map((w) => mapEvent(w)))
   }, [worktimeListSelector]);
 
   const setTime = (date, hm) => {
@@ -90,18 +88,17 @@ const MyCalendar = (props) => {
   return (
     <div style={{ backgroundColor: 'white' }}>
       <Calendar
-        style={{ backgroundColor: 'navy' }}
         selectable
         localizer={localizer}
         events={events}
         startAccessor="start"
         endAccessor="end"
-        style={{ height: 500 }}
         onSelectSlot={handleSelectSlot}
         onSelectEvent={handleSelectEvent}
         onNavigate={handleNavigateEvent}
+        className="calendar"
       />
-      <div style={{ paddingTop: '30px', textAlign: 'center'}}>
+      <div style={{ padding: '30px 0 14px 0', textAlign: 'center'}}>
         <Export getMonthWorktimes={getMonthWorktimes} />
         <Print getMonthWorktimes={getMonthWorktimes} />
       </div>

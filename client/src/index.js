@@ -12,10 +12,7 @@ import store from './store';
 import './App.scss';
 import './index.css';
 
-// development only axios helper
-import axios from 'axios';
 import { toast } from 'react-toastify';
-window.axios = axios;
 
 toast.configure({
   autoClose: 1500

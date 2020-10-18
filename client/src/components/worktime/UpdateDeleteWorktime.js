@@ -81,10 +81,11 @@ const UpdateDeleteWorktime = ({ close, open, worktime }) => {
     setComment(e.target.value);
   };
 
-  const afterStart = () => hmToMS(end) > hmToMS(start);
+  const afterStart = (end) => {
+    return hmToMS(end) > hmToMS(start)};
 
-  const smallerPeriod = () => {
-    return !afterStart() ? true : periodSansPause(end, start, pause) > 59999;
+  const smallerPeriod = (pause) => {
+    return !afterStart(end) ? true : periodSansPause(end, start, pause) > 59999;
   };
 
   return (

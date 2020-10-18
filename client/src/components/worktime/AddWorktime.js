@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
-import { Form, Button, Col, Spinner } from 'react-bootstrap';
+import { Form, Col, Button, Spinner } from 'react-bootstrap';
 
 import Modal from '../Modal';
 import { hmToMS, periodSansPause } from '../../services/time';
@@ -10,11 +10,11 @@ import { addWorktimeLoading } from '../../store/worktime/worktimeSelector';
 
 const AddWorktime = ({ date, open, close }) => {
   const dispatch = useDispatch();
-  const [project, setProject] = useState();
-  const [start, setStart] = useState();
-  const [pause, setPause] = useState();
-  const [end, setEnd] = useState();
-  const [comment, setComment] = useState();
+  const [project, setProject] = useState('');
+  const [start, setStart] = useState('00:00');
+  const [pause, setPause] = useState('00:00');
+  const [end, setEnd] = useState('00:00');
+  const [comment, setComment] = useState('');
   const { register, handleSubmit, errors } = useForm();
 
   const addWorktimeLoadingSelector = useSelector(addWorktimeLoading);
@@ -64,10 +64,11 @@ const AddWorktime = ({ date, open, close }) => {
     setComment(e.target.value);
   };
 
-  const afterStart = () => hmToMS(end) > hmToMS(start);
+  const afterStart = (end) => {
+    return hmToMS(end) > hmToMS(start)};
 
-  const smallerPeriod = () => {
-    return !afterStart() ? true : periodSansPause(end, start, pause) > 59999;
+  const smallerPeriod = (pause) => {
+    return !afterStart(end) ? true : periodSansPause(end, start, pause) > 59999;
   };
 
   return (

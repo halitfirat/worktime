@@ -58,38 +58,6 @@
   content: '\eab0';
 }
 
-/* roboto font */
-
-@font-face {
-  font-family: 'RobotoRegular';
-  src: url('fonts/RobotoRegular.eot');
-  src: url('fonts/RobotoRegular.eot') format('embedded-opentype'),
-    url('fonts/RobotoRegular.woff2') format('woff2'),
-    url('fonts/RobotoRegular.woff') format('woff'),
-    url('fonts/RobotoRegular.ttf') format('truetype'),
-    url('fonts/RobotoRegular.svg#RobotoRegular') format('svg');
-}
-
-@font-face {
-  font-family: 'RobotoLight';
-  src: url('fonts/RobotoLight.eot');
-  src: url('fonts/RobotoLight.eot') format('embedded-opentype'),
-    url('fonts/RobotoLight.woff2') format('woff2'),
-    url('fonts/RobotoLight.woff') format('woff'),
-    url('fonts/RobotoLight.ttf') format('truetype'),
-    url('fonts/RobotoLight.svg#RobotoLight') format('svg');
-}
-
-@font-face {
-  font-family: 'RobotoBlack';
-  src: url('fonts/RobotoBlack.eot');
-  src: url('fonts/RobotoBlack.eot') format('embedded-opentype'),
-    url('fonts/RobotoBlack.woff2') format('woff2'),
-    url('fonts/RobotoBlack.woff') format('woff'),
-    url('fonts/RobotoBlack.ttf') format('truetype'),
-    url('fonts/RobotoBlack.svg#RobotoBlack') format('svg');
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -115,23 +83,24 @@ code {
 .header {
   background-color: navy;
   color: silver;
-  font-family: RobotoRegular;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
   text-align: center;
   padding: 39px 0 23px 0;
   margin-bottom: 9px;
 }
 
 .header-sub {
-  letter-spacing: 4px;
-  word-spacing: 6px;
+  letter-spacing: 6px;
+  word-spacing: 8px;
   font-size: 30px;
-  font-family: RobotoLight;
+  font-weight: 300;
 }
 
 .header-main {
   letter-spacing: 3px;
   word-spacing: 6px;
-  font-family: RobotoBlack;
+  font-weight: 900;
   font-size: 84px;
   margin: -12px 0 8px 0;
 }
@@ -148,48 +117,6 @@ code {
   bottom: 1px;
 }
 
-/* media query > 480px */
-
-@media screen and (max-width: 495px) {
-  .header {
-    background-color: navy;
-    color: silver;
-    font-family: RobotoRegular;
-    text-align: center;
-    padding: 19px 0 23px 0;
-    margin-bottom: 9px;
-  }
-
-  .header-sub {
-    letter-spacing: 2px;
-    word-spacing: 4px;
-    font-size: 16px;
-    font-family: RobotoLight;
-  }
-
-  .header-main {
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-family: RobotoBlack;
-    font-size: 45px;
-    margin: -7px 0 8px 0;
-  }
-
-  .header-link {
-    font-size: 18px;
-    margin: -7px 0 -15px 0;
-  }
-
-  .icon-github {
-    font-size: 1px;
-    position: relative;
-  }
-
-  .modals {
-    min-width: 350px;
-  }
-}
-
 /* fill buttons */
 
 .button-fill {
@@ -203,7 +130,7 @@ code {
 
   text-decoration: none;
   font-size: 20px;
-  font-family: RobotoRegular;
+  font-family: Roboto, sans-serif;
   letter-spacing: 1.5px;
   align-items: center;
   justify-content: center;
@@ -258,18 +185,6 @@ code {
   color: navy;
 }
 
-/* media query > 320px */
-
-@media screen and (max-width: 335px) {
-  .button-fill {
-    width: 49%;
-  }
-
-  .modals {
-    min-width: 264px;
-  }
-}
-
 /* modals & overlays */
 
 .modals {
@@ -291,4 +206,84 @@ code {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1920px) {
+  .calendar {
+    height: 908px;
+  }
+}
+
+@media screen and (max-width: 1680px) {
+  .calendar {
+    height: 805px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .calendar {
+    height: 668px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .calendar {
+    height: 617px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .calendar {
+    height: 512px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calendar {
+    height: 405px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 19px 0 23px 0;
+  }
+
+  .header-sub {
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-size: 16px;
+  }
+
+  .header-main {
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 45px;
+    margin: -7px 0 8px 0;
+  }
+
+  .header-link {
+    font-size: 18px;
+    margin: -7px 0 -15px 0;
+  }
+
+  .icon-github {
+    font-size: 10px;
+  }
+
+  .modals {
+    min-width: 350px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .button-fill {
+    width: 49%;
+  }
+
+  .modals {
+    min-width: 280px;
+  }
 }
