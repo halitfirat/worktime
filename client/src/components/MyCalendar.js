@@ -98,7 +98,7 @@ const MyCalendar = (props) => {
         onNavigate={handleNavigateEvent}
         className="calendar"
       />
-      <div style={{ paddingTop: '16px', textAlign: 'center'}}>
+      <div style={{ paddingTop: '10px', textAlign: 'center'}}>
         <Export getMonthWorktimes={getMonthWorktimes} />
         <Print getMonthWorktimes={getMonthWorktimes} />
       </div>

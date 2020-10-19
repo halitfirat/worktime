@@ -92,17 +92,16 @@ code {
 
 .header-sub {
   letter-spacing: 6px;
-  word-spacing: 8px;
+  word-spacing: 7px;
   font-size: 30px;
   font-weight: 300;
 }
 
 .header-main {
-  letter-spacing: 3px;
-  word-spacing: 6px;
+  letter-spacing: 2px;
   font-weight: 900;
-  font-size: 84px;
-  margin: -12px 0 8px 0;
+  font-size: 93px;
+  margin: -17px 0 6px 0;
 }
 
 .header-link {
@@ -191,7 +190,7 @@ code {
   color: navy;
 }
 
-/* modals & overlays */
+/* modals */
 
 .modals {
   position: fixed;
