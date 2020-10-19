@@ -87,7 +87,7 @@ code {
   font-weight: 400;
   text-align: center;
   padding: 39px 0 23px 0;
-  margin-bottom: 9px;
+  margin-bottom: 16px;
 }
 
 .header-sub {
@@ -115,6 +115,12 @@ code {
   font-size: 15px;
   position: relative;
   bottom: 1px;
+}
+
+/* calendar */
+
+.calendar {
+  height: 562px;
 }
 
 /* fill buttons */
@@ -210,43 +216,19 @@ code {
 
 /* media queries */
 
-@media screen and (max-width: 1920px) {
-  .calendar {
-    height: 908px;
-  }
-}
-
-@media screen and (max-width: 1680px) {
-  .calendar {
-    height: 805px;
-  }
-}
-
-@media screen and (max-width: 1366px) {
-  .calendar {
-    height: 668px;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .calendar {
-    height: 617px;
-  }
-}
-
 @media screen and (max-width: 1024px) {
   .calendar {
-    height: 512px;
+    height: 480px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .calendar {
-    height: 405px;
+    height: 375px;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .header {
     padding: 19px 0 23px 0;
   }

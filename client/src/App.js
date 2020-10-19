@@ -14,10 +14,10 @@ function App() {
 
   return (
     <div>
-      <div className="container-fluid">
         <Header />
-        <MyCalendar />
-      </div>
+        <div className="container">
+          <MyCalendar />
+        </div>
     </div>
   );
 }

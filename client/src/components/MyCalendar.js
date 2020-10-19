@@ -51,7 +51,7 @@ const MyCalendar = (props) => {
     const periodHM = msToHM(period);
 
     return {
-      title: `${periodHM} Work | ${pause} Pause`,
+      title: `${periodHM} hrs`,
       start: startDateTime,
       end: endDateTime,
       resource: worktime
@@ -98,7 +98,7 @@ const MyCalendar = (props) => {
         onNavigate={handleNavigateEvent}
         className="calendar"
       />
-      <div style={{ padding: '30px 0 14px 0', textAlign: 'center'}}>
+      <div style={{ paddingTop: '16px', textAlign: 'center'}}>
         <Export getMonthWorktimes={getMonthWorktimes} />
         <Print getMonthWorktimes={getMonthWorktimes} />
       </div>
